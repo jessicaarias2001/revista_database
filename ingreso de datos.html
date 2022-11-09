@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width">
     <title>insertar articulo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     
 <link rel="stylesheet" href="Diseño_menu.css"/>
 
@@ -23,7 +22,7 @@
         <ul>
             <br>
                 <label for="Edición">Edición:</label>
-                 <select name="edicion" class="form-select" aria-label="seleccion_edicion" required>
+                 <select name="edicion" class="form-select"  aria-label="seleccion_edicion" required>
                   <option selected></option>
                   <option value="edicion n°1">edicion n°1</option>
                  </select>
@@ -52,16 +51,31 @@
            <textarea id="texto_articulo" name="texto_articulo" required></textarea></br>
            <br>
             <label for="archivo adjunto">Adjuntar archivo</label>
-        <input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple /></br>
+        <input type="file" name="adjunto"id="imagen" accept=".pdf,.jpg,.png" multiple /></br>
         <br>
         
-        <input type="submit" value="Subir">
+        <button class="btn btn-primary" onclick="guardar()" >Subir</button>
+        <!-- <input type="submit" value="Subir"> -->
         <input type="reset" value="Cancelar">
+        <img src="ALBUM001.jpg" id="mostrando_imagen"alt="Clock"sizes="(min-width: 600px) 100px, 25vw">
       </br>
         </ul>
     </div>
     </form>
+                        
+
     
        
 
   </body>
+  <script sre="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="js/configuracion.js"></script>
+  <script src="js/guardar.js"></script>
+</html>
