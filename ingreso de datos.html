@@ -15,6 +15,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
   </head>
   <body>
+
+    <h1> Insertar articulo</h1>
     <div class="d-flex flex-column-center">
         
    
@@ -56,13 +58,74 @@
         
         <button class="btn btn-primary" onclick="guardar()" >Subir</button>
         <!-- <input type="submit" value="Subir"> -->
-        <input type="reset" value="Cancelar">
-        <img src="ALBUM001.jpg" id="mostrando_imagen"alt="Clock"sizes="(min-width: 600px) 100px, 25vw">
+        <input class="btn btn-primary" type="reset" value="Cancelar">
+        
       </br>
         </ul>
     </div>
     </form>
-                        
+        
+    <h1> Modificar articulo</h1>
+
+<div class="d-flex flex-column-center">
+        
+   
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <br>
+                <label for="Edición">Edición:</label>
+                 <select name="edicion" class="form-select" aria-label="seleccion_edicion" required>
+                  <option selected></option>
+                  <option value="edicion n°1">edicion n°1</option>
+                 </select>
+            
+                </br>
+            <br>
+                <label for="Seccion">Sección:</label>
+                 <select name="Seccion" class="form-select" aria-label="seleccion_secciones" required>
+                  <option selected></option>
+                  <option value="Farandula">Farandula</option>
+                  <option value="Noticias">Noticias</option>         
+                  <option value="Deportes">Deportes</option>
+                  <option value="Economia">Economia</option>
+                  <option value="Empresas">Empresas</option>
+                  <option value="Clasificados">Clasificados</option>
+                 </select>
+            
+                </br>
+            <br>
+                <label for="Nombre del articulo">Nombre del articulo:</label>
+                 <select name="Titulo_articulo" class="form-select" aria-label="seleccion_articulo" required>
+                  <option selected></option>
+                  <option value="edicion n°1">ciencias basicas</option>
+                 </select>
+            
+                </br>
+         <br>
+           <label >Titulo del articulo:</label>
+           <input type="text" id="Titulo_articulo" name="titulo_articulo" required>
+            </br>
+         <br>
+           <label for="texto_articulo">Texto del articulo</label>
+           <textarea id="texto_articulo" name="texto_articulo" required></textarea>
+        </br>
+         <br>
+            <label for="archivo adjunto">Adjuntar archivo</label>
+        <input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple />
+    </br>
+        
+    <button class="btn btn-primary" onclick="guardar()">Modificar </button>
+    <button class="btn btn-primary" onclick="eliminar()">Eliminar articulo</button>
+
+        </ul>
+   
+    </form>
+</div>
+<h2> Editar mas </h2>
+
+<a class="btn btn-primary  textboton" href=" " role="button">Editar Edición</a>
+<a class="btn btn-primary  textboton" href=" " role="button">Editar Sección</a>     
+
 
     
        
