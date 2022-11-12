@@ -1,0 +1,132 @@
+body
+{
+    background-color: rgb(247, 229, 214);
+}
+#header {
+    background-color: rgb(236, 153, 120);
+    margin:auto;
+    width:1920px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+ul, ol {
+    list-style:none;
+    
+}
+.nav
+{
+    width:1920px; 
+}
+.nav > li {
+    float:left;
+    
+}
+
+.nav li a {
+    background-color: rgb(236, 153, 120);0;
+    color:#fff;
+    text-decoration:none;
+    padding: 14px 16px;
+    display:block;
+    
+}
+
+.nav li a:hover {
+    background-color: rgb(243, 70, 1);
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:block;
+}
+
+.nav li ul li {
+    position:relative;
+}
+
+.nav li ul li ul {
+    right:-140px;
+    top:0px;
+}
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 50px;
+    height: 300px; 
+  }
+  p
+  {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
+  }
+  .columna {
+    float: left;
+    width: 27%;
+    padding: 132px;
+    height: 300px; 
+  }
+  .columna2 {
+    float: right;
+    width: 27%;
+    padding: 132px;
+    height: 300px; 
+    margin-left: -150px;
+  }
+  .margen
+  {
+    float: left;
+    height: 100px; 
+  }
+  
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .fondotext{
+    padding: 10px;
+    background-color: rgb(236, 153, 120);
+    box-shadow: 10px 10px 40px  rgb(148, 121, 118);
+  }
+  .fondotext2{
+    padding: 10px;
+    background-color: rgb(241, 208, 194);
+    box-shadow: 10px 10px 40px  rgb(148, 121, 118);
+   
+  }
+  .contenedor
+  {
+    
+margin-left: 20%;
+  }
+  .margenlogo{
+    margin-left: 15%;
+  }
+  .margenmenu{
+    margin-left: 50%;
+  }
+  .titulo
+  {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 70px;
+    text-align: center;
+    color: rgb(255, 246, 232);
+   margin-top: 5%;
+    margin-right: 18%;
+    text-shadow: 4px 0px 0px  rgb(243, 70, 1);
+  }
+  .tituloarticulo
+  {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
+    color: rgb(255, 246, 232);
+    text-shadow: 2px 0px 0px  rgb(243, 70, 1);
+  }
