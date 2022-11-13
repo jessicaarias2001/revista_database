@@ -83,6 +83,10 @@ function modificar(id,edicion,seccion,titulo,texto){
         })
         .then(() => {
             console.log("Document successfully updated!");
+            document.getElementById("edicion_modificar").value='';
+            document.getElementById("seccion_modificar").value='';
+            document.getElementById("titulo_articulo_modificar").value='';
+            document.getElementById("texto_articulo_modificar").value='';
         })
         .catch((error) => {
             // The document probably doesn't exist.
