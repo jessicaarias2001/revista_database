@@ -67,75 +67,19 @@
     </div>
     </form>
         
-    <h1> Modificar articulo</h1>
+    
+<h1> Modificar / Eliminar articulo</h1>
 
 <div class="d-flex flex-column-center">
         
    
     <form action="/my-handling-form-page" method="post">
         <ul>
-            <br>
+            <!-- <br>
                 <label for="Edición">Edición:</label>
-                 <select name="edicion_modificar" class="form-select" aria-label="seleccion_edicion" required>
+                 <select name="edicion_modificar"id="edicion_modificar" class="form-select" aria-label="seleccion_edicion" required>
                   <option selected></option>
-                  <option id="edicion_modificar"value="edicion n°1">1</option>
-                 </select>
-            
-                </br>
-            <br>
-                <label for="Seccion">Sección:</label>
-                 <select name="Seccion" id="seccion_" class="form-select" aria-label="seleccion_secciones" required>
-                  <option selected></option>
-                  <option value="Farandula">Farandula</option>
-                  <option value="Noticias">Noticias</option>         
-                  <option value="Deportes">Deportes</option>
-                  <option value="Economia">Economia</option>
-                  <option value="Empresas">Empresas</option>
-                  <option value="Clasificados">Clasificados</option>
-                 </select>
-            
-                </br>
-            <br>
-                <label for="Nombre del articulo">Nombre del articulo:</label>
-                 <select name="Titulo_articulo" class="form-select" aria-label="seleccion_articulo" required>
-                  <option selected></option>
-                  <option value="edicion n°1">ciencias basicas</option>
-                 </select>
-            
-                </br>
-         <br>
-           <label >Titulo del articulo:</label>
-           <input type="text" id="Titulo_articulo" name="titulo_articulo" required>
-            </br>
-         <br>
-           <label for="texto_articulo">Texto del articulo</label>
-           <textarea id="texto_articulo" name="texto_articulo" required></textarea>
-        </br>
-         <br>
-            <label for="archivo adjunto">Adjuntar archivo</label>
-        <input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple />
-    </br>
-        
-    <button class="btn btn-primary" onclick="guardar()">Modificar </button>
-    
-
-        </ul>
-   
-    </form>
-    
-</div> 
-<h1> Eliminar articulo</h1>
-
-<div class="d-flex flex-column-center">
-        
-   
-    <form action="/my-handling-form-page" method="post">
-        <ul>
-            <br>
-                <label for="Edición">Edición:</label>
-                 <select name="edicion_modificar" class="form-select" aria-label="seleccion_edicion" required>
-                  <option selected></option>
-                  <option id="edicion_modificar"value="edicion n°1">1</option>
+                  <option value="edicion n°1">1</option>
                  </select>
             
             </br>
@@ -151,9 +95,9 @@
                   <option value="Clasificados">Clasificados</option>
                  </select>
             
-            </br>
+            </br> 
            
-            <br><a href="#" class="btn btn-primary" onclick="buscar_articulos_para_eliminar()">Buscar articulos</a></br>
+            <br><a href="#" class="btn btn-primary" onclick="buscar_articulos_para_eliminar()">Buscar articulos</a></br>-->
              <br>
              <div class="container">
               
@@ -164,6 +108,7 @@
                       <th scope="col">Seccion</th>
                       <th scope="col">Articulo</th>
                       <th scope="col">Eliminar</th>
+                      <th scope="col">Modificar</th>
                        
                      </tr>
                   </thead>
@@ -172,13 +117,35 @@
                 </table>
             </div>
             
-             <h2 id="articulos_encontrados">  </h2>
+            </br> 
+            <br>
+                <label for="Edición">Edición:</label>
+                 <select name="edicion_modificar"id="edicion_modificar" class="form-select" aria-label="seleccion_edicion" required>
+                  <option selected></option>
+                  <option value="edicion n°1">1</option>
+                 </select>
+            
+            </br>
+            <br>
+                <label for="Seccion">Sección:</label>
+                 <select name="Seccion" id="seccion_modificar" class="form-select" aria-label="seleccion_secciones" required>
+                  <option selected></option>
+                  <option value="Farandula">Farandula</option>
+                  <option value="Noticias">Noticias</option>         
+                  <option value="Deportes">Deportes</option>
+                  <option value="Economia">Economia</option>
+                  <option value="Empresas">Empresas</option>
+                  <option value="Clasificados">Clasificados</option>
+                 </select>
+            
             </br>  
             <br>
-            <label >Titulo del articulo que desea eliminar:</label>
-            <input type="text" id="Titulo_articulo_eliminar" name="titulo_articulo_eliminar" required>
+            <label >Titulo del articulo :</label>
+            <input type="text" id="titulo_articulo_modificar" name="titulo_articulo_modificar" required>
+            <label >Texto del articulo :</label>
+            <input type="text" id="texto_articulo_modificar" name="texto_articulo_modificar" required>
             </br>
-            <button class="btn btn-primary" id= "eliminar_articulo"onclick="eliminar_id()">Eliminar articulo</button>
+            <button class="btn btn-primary" id= "modificar_articulo_boton"onclick="modificar()">Guardar modificaciones </button>
 
         </ul>
    

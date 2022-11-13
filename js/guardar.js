@@ -16,6 +16,33 @@ function guardar(){
 }
 
 
+function buscar_articulos_para_eliminar(){
+    db.collection("articulo").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            document.getElementById("articulos_encontrados").innerHTML=`${doc.data().titulo_articulo}`
+            ;
+        });
+    });
+}
+
+//Borrar articulos
+var tabla = document. getElementById('tabla');
+db.collection("articulo").onSnapshot((querySnapshot) => {
+    tabla.innerHTML='';
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+        tabla.innerHTML+=`
+        <tr>
+            <td scope="row">${doc.data().edicion_insertar}</td>
+            <td scope="col">${doc.data().seccion_revista}</td>
+            <td scope="col">${doc.data().titulo_articulo}</td>  
+            <td> <button onclick="eliminar('${doc.id}')">Eliminar</button> </td>      
+            <td> <button onclick="modificar('${doc.id}','${doc.data().edicion_insertar}','${doc.data().seccion_revista}','${doc.data().titulo_articulo}','${doc.data().texto}')">Modificar</button> </td>   
+        </tr>
+        `
+    });
+});
+
 function eliminar(id){
     db.collection("articulo").doc(id).delete({
      
@@ -28,29 +55,41 @@ function eliminar(id){
     });
 }
 
-function buscar_articulos_para_eliminar(){
-    db.collection("articulo").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            document.getElementById("articulos_encontrados").innerHTML=`${doc.data().titulo_articulo}`
-            ;
-        });
-    });
+//modificar/ editar articulos
+
+function modificar(id,edicion,seccion,titulo,texto){
+    
+    document.getElementById("edicion_modificar").value=edicion;
+    document.getElementById("seccion_modificar").value=seccion;
+    document.getElementById("titulo_articulo_modificar").value=titulo;
+    document.getElementById("texto_articulo_modificar").value=texto;
+
+    var boton=document.getElementById("modificar_articulo_boton");
+    boton.onclick=function(){
+        var washingtonRef = db.collection("articulo").doc(id);
+
+        var edicion=document.getElementById("edicion_modificar").value;
+        var seccion=document.getElementById("seccion_modificar").value;
+        var titulo=document.getElementById("titulo_articulo_modificar").value;
+        var texto=document.getElementById("texto_articulo_modificar").value;
+
+
+        return washingtonRef.update({
+        edicion_insertar:edicion,
+        seccion_revista:seccion ,
+        titulo_articulo: titulo,
+        texto:texto,
+        //img: imagen 
+        })
+        .then(() => {
+            console.log("Document successfully updated!");
+        })
+        .catch((error) => {
+            // The document probably doesn't exist.
+            console.error("Error updating document: ", error);
+        });   
+        }
+        // Set the "capital" field of the city 'DC'
+        
 }
-
-var tabla = document. getElementById('tabla');
-db.collection("articulo").onSnapshot((querySnapshot) => {
-    tabla.innerHTML='';
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-        tabla.innerHTML+=`
-        <tr>
-            <td scope="row">${doc.data().edicion_insertar}</td>
-            <td scope="col">${doc.data().seccion_revista}</td>
-            <td scope="col">${doc.data().titulo_articulo}</td>  
-            <td> <button onclick="eliminar('${doc.id}')">Eliminar</button> </td>        
-        </tr>
-        `
-    });
-});
-
 
