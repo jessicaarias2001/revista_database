@@ -42,7 +42,7 @@
     });
 }
  var tabla_economia = document. getElementById('economia_secciones');
- db.collection("articulo").where("seccion_revista", "==", "Economia").onSnapshot((querySnapshot) => {
+ db.collection("articulo").onSnapshot((querySnapshot) => {
      tabla_economia.innerHTML='';
      querySnapshot.forEach((doc) => {
          console.log(`${doc.id} => ${doc.data()}`);
