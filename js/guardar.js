@@ -9,6 +9,10 @@ function guardar(){
     })
     .then((docRef) => {
         alert("registro exitoso");
+        document.getElementById("edicion_insertar").value='';
+            document.getElementById("seccion_insertar").value='';
+            document.getElementById("Titulo_articulo").value='';
+            document.getElementById("texto_articulo").value='';
     })
     .catch((error) => {
         alert("error en el registro");
