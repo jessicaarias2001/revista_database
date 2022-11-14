@@ -96,4 +96,3 @@ function modificar(id,edicion,seccion,titulo,texto){
         // Set the "capital" field of the city 'DC'
         
 }
-
