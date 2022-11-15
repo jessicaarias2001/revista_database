@@ -1,5 +1,5 @@
 /// SECCION FARANDULA
-db.collection("articulo").where("seccion_revista", "==", "Deportes").onSnapshot((querySnapshot) => {
+db.collection("articulo").where("seccion_revista", "==", "Farandula").onSnapshot((querySnapshot) => {
     id_n=0;
     querySnapshot.forEach((doc) => {
        
