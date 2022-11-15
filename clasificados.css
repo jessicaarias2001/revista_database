@@ -130,3 +130,8 @@ margin-left: 20%;
     color: rgb(255, 246, 232);
     text-shadow: 2px 0px 0px  rgb(243, 70, 1);
   }
+  .imagen
+  {
+    width: 200px;
+    height: 200px;
+  }

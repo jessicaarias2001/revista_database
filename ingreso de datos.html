@@ -6,7 +6,7 @@
     <title>insertar articulo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     
-<link rel="stylesheet" href="Diseño_menu.css"/>
+<link rel="stylesheet" href="articulo.css"/>
 
     
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,12 +15,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
   </head>
   <body>
-
-    <h1> Insertar articulo</h1>
+    <div id="header">
+        <ul class="nav">
+            <li class=" margenlogo"><a href="home.html">Tu revista</a></li>
+            <li class=" margenmenu"><a href="">Edición</a>
+                <ul>
+                    <li><a href="home.html">Edición 1</a></li> 
+                </ul>
+            </li>
+            <li><a href="">Secciones</a>
+                <ul>
+                    <li><a href="farandula.html">Farandula</a></li>
+                   
+                    <li><a href="deportes.html">Deportes</a></li>
+                    <li><a href="economia.html">Economia</a></li>
+                    <li><a href="empresas.html">Empresas</a></li>
+                    <li><a href="clasificados.html">Clasificados</a></li>
+                </ul>
+            </li>
+            <li><a href="ingreso de datos.html">Ingresar Articulo</a></li>
+           
+        </ul>
+    </div>
+    <div class="container"> 
+    <h1 class="titulo"> Insertar articulo</h1>
     <div class="d-flex flex-column-center">
         
    
-    <form action="/my-handling-form-page" method="post">
+    <form class="formmargen" action="/my-handling-form-page" method="post">
         <ul>
             <br>
                 <label  for="Edición">Edición:</label>
@@ -35,7 +57,7 @@
                  <select id="seccion_insertar" name="Seccion" class="form-select" aria-label="seleccion_secciones" required>
                   <option selected></option>
                   <option value="Farandula">Farandula</option>
-                  <option value="Noticias">Noticias</option>         
+                         
                   <option value="Deportes">Deportes</option>
                   <option value="Economia">Economia</option>
                   <option value="Empresas">Empresas</option>
@@ -58,9 +80,9 @@
         <label for="otros">Otros:</label></br>
         <br>   
         <input type="text" id="otros" name="otros" required></br>
-        <button class="btn btn-primary" onclick="guardar()" >Subir</button>
+        <button class=" margenboton btn btn-primary boton" onclick="guardar()" >Subir</button>
         <!-- <input type="submit" value="Subir"> -->
-        <input class="btn btn-primary" type="reset" value="Cancelar">
+        <input class=" margenboton btn btn-primary boton" type="reset" value="Cancelar">
         
       </br>
         </ul>
@@ -68,12 +90,12 @@
     </form>
         
     
-<h1> Modificar / Eliminar articulo</h1>
+<h1 class="titulo"> Modificar / Eliminar articulo</h1>
 
 <div class="d-flex flex-column-center">
         
    
-    <form action="/my-handling-form-page" method="post">
+    <form  class="formmargen2" action="/my-handling-form-page" method="post">
         <ul>
             <!-- <br>
                 <label for="Edición">Edición:</label>
@@ -131,7 +153,7 @@
                  <select name="Seccion" id="seccion_modificar" class="form-select" aria-label="seleccion_secciones" required>
                   <option selected></option>
                   <option value="Farandula">Farandula</option>
-                  <option value="Noticias">Noticias</option>         
+                        
                   <option value="Deportes">Deportes</option>
                   <option value="Economia">Economia</option>
                   <option value="Empresas">Empresas</option>
@@ -145,17 +167,17 @@
             <label >Texto del articulo :</label>
             <input type="text" id="texto_articulo_modificar" name="texto_articulo_modificar" required>
             </br>
-            <button class="btn btn-primary" id= "modificar_articulo_boton"onclick="modificar()">Guardar modificaciones </button>
+            <button class=" margenboton btn btn-primary boton" id= "modificar_articulo_boton"onclick="modificar()">Guardar modificaciones </button>
 
         </ul>
    
     </form>
     
 </div> 
-<h2> Editar mas </h2>
 
 
-<a class="btn btn-primary  textboton" href=" " role="button">Editar Sección</a>     
+</div>
+   
 
 
     

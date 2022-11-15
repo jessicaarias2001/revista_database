@@ -130,3 +130,19 @@ margin-left: 20%;
     color: rgb(255, 246, 232);
     text-shadow: 2px 0px 0px  rgb(243, 70, 1);
   }
+  .boton
+  {
+    background-color:rgb(243, 70, 1)!important;
+    border-color: brown!important;
+    box-shadow: 5px 5px 10px  rgb(68, 38, 35)!important;
+  }
+  .boton:hover {
+    background-color: rgb(155, 37, 1)!important;
+    border-color: brown!important;
+    box-shadow: 5px 5px 10px  rgb(68, 38, 35)!important;
+}
+.imagen
+{
+  width: 200px;
+  height: 200px;
+}
