@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Clasificados</title>
+    <title>Editar sección</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     
-<link rel="stylesheet" href="clasificados.css"/>
+<link rel="stylesheet" href="editarseccion.css"/>
 
     
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet"> 
   </head>
   <body>
     <div id="header">
@@ -38,41 +39,49 @@
             
         </ul>
     </div>
-      <div class="contenedor">
-        <p class="titulo"> Clasificados</p>
- <div class="d-flex flex-row-center">
-    <div class="column ">
-        <p id="titulo_clasificados_1"class="tituloarticulo"></p>
-        <p id="texto_clasificados_1"class="fondotext"></p>
-    </div>
-    <div class="columna2">
-    <img class="imagen"src="clasificados.jpg" alt="">
-    </div>
+
+
+
+<div class="container">
+    <h1 class="titulo"> Editar edición</h1>
+    <div class="d-flex flex-column-center">
+        
+   
+    <form class="formmargen" action="/my-handling-form-page" method="post">
+        <ul>
+           
+           
+                 <br>
+                <label for="edicion">Edición:</label>
+                 <select name="edicion" class="form-select" aria-label="seleccion_édiciones" required>
+                  <option selected></option>
+                  <option value="1">edicion 1</option>
+                  <option value="2">edicion 2</option>         
+                  
+                 </select>
+                </br>
+                 <br>
+       
+           <label for="Titulo_edición">Titulo de la edición:</label></br>
+           <input type="text" id="Titulo_edición" name="Titulo_edición" required>
+        <button class="btn btn-primary boton" onclick="guardar()" >modificar</button>
+        <button class="btn btn-primary boton" onclick="eliminar()" >Eliminar</button>
+        <br>
+        <label for="Titulo_edición">Agregar nueva edición:</label></br>
+        <input type="text" id="Titulo_edición" name="Titulo_edición" required>
+     <button class="btn btn-primary boton" onclick="guardar()" >Añadir</button>
+   
+        
+
+        </ul>
+    
+    </form>
 </div>
-
-<div class="d-flex flex-row-center">
-    <div class="columna">
-        <img class="imagen"src="clasificados.jpg"  alt="">
-        </div>
-
-    <div class="column">
-        <p id="titulo_clasificados_2"class="tituloarticulo"></p>
-        <p id="texto_clasificados_2"class="fondotext2"> </p>
-    </div>    
-</div>
-
-<div class="d-flex flex-row-center">
-    <div class="column">
-        <p id="titulo_clasificados_3"class="tituloarticulo"></p>
-        <p id="texto_clasificados_3"class="fondotext"> </p>
-    </div>
-    <div class="columna2">
-    <img class="imagen"src="clasificados.jpg"  alt="">
-    </div>
-</div>
+   
 
 
-</div>
+    
+  </div>  
 
   </body>
   <script sre="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -85,5 +94,4 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
   <script src="js/configuracion.js"></script>
   <script src="js/guardar.js"></script>
-  <script src="js/seccion_clasificados.js"></script>
 </html>
